@@ -9,6 +9,9 @@ const App = () => {
   const [currentGames, setCurrentGames] = useState([]);
   const [upcomingGames, setUpcomingGames] = useState([]);
   const [searchTerm, setSearchTerm] =useState("")
+  const [filteredCurrentGames, setFilteredCurrentGames] = useState([]);
+  const [filteredUpcomingGames, setFilteredUpcomingGames] = useState([]);
+  
   useEffect(() => {
     fetch("http://localhost:3000/currentgames")
       .then((resp) => resp.json())
