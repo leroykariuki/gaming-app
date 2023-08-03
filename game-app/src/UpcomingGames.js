@@ -10,3 +10,4 @@ const UpcomingGames = ({ upcomingGames }) => {
   );
 };
 
+export default UpcomingGames;
