@@ -1,38 +1,126 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to bottom right, #ffcc00, #ff6600, #ff3300);
+}
+
+header {
+  background-color: #333;
+  color: #fff;
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: #444;
+  padding: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.game-card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.game-card img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.game-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.game-description {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.game-button {
+  background-color: #ffcc00;
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.game-button:hover {
+  background-color: #ffdd33;
+}
+
+.my-games-container {
+  margin-top: 30px;
+}
+
+.my-games-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.my-games-list {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.my-games-item {
+  color: #444;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+.my-games-item:last-child {
+  border-bottom: none;
 }

@@ -4,6 +4,7 @@ import CurrentGames from "./CurrentGames";
 import UpcomingGames from "./UpcomingGames";
 import MyGames from "./MyGames";
 import SearchBar from "./SearchBar";
+import "./App.css";
 
 const App = () => {
   const [currentGames, setCurrentGames] = useState([]);
@@ -17,7 +18,7 @@ const App = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setCurrentGames(data);
-        setFilteredCurrentGames(data); 
+        setFilteredCurrentGames(data); // Initialize filteredCurrentGames with currentGames
       });
   }, []);
 
@@ -26,7 +27,7 @@ const App = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setUpcomingGames(data);
-        setFilteredUpcomingGames(data); 
+        setFilteredUpcomingGames(data); // Initialize filteredUpcomingGames with upcomingGames
       });
   }, []);
 
