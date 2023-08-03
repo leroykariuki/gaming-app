@@ -1,0 +1,49 @@
+{
+    "currentgames": [
+      {
+        "title": "Loop Hero",
+        "id": "db122f42b41f4dec927e0f280cf653bd",
+        "description": "The Lich has thrown the world into a timeless loop and plunged its inhabitants into never-ending chaos. Wield an expanding deck of mystical cards to place enemies, buildings, and terrain along each unique expedition loop for the brave hero.",
+        "url": "https://cdn1.epicgames.com/ff50f85ed609454e80ac46d9496da34d/offer/EGS_TheLichhasthrowntheworldintoatimelessloop_FourQuarters_S1-2560x1440-dd971b1a2d79b2984c22a3b7c66c60da.jpg"
+      },
+      {
+        "title": "Severed Steel",
+        "id": "b26543426574454e82e07624450c9022",
+        "description": "A stylish single-player FPS featuring a fluid stunt system, destructible voxel environments, loads of bullet time, a unique one-armed protagonist, and a dark electronic soundtrack.",
+        "url": "https://cdn1.epicgames.com/offer/5db7394e65044dd1bb083ee983e2b3a5/EGS_SeveredSteel_GreylockStudio_S2_1200x1600-42edb36730050be3d18171baac58a7f2"
+      },
+      {
+        "title": "Europa Universalis IV",
+        "id": "45b82cb4454b40439b61ba126adfabec",
+        "description": "Lead any nation from Renaissance to Revolution in a complex simulation of the early modern world. Master the art of war, diplomacy and trade to shape and change your nation’s history!",
+        "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_EuropaUniversalisIV_ParadoxDevelopmentStudioParadoxTinto_S4_1200x1600-381fe4bad2c0951566b465ab1a46726d"
+      },
+      {
+        "title": "Homeworld Remastered Collection",
+        "id": "4709cb4179de4f3daa08fe69ec41bc22",
+        "description": "Experience the epic space strategy games that redefined the RTS genre. Control your fleet and build an armada across more than 30 single-player missions. Choose unit types, fleet formations and flight tactics for each strategic situation.",
+        "url": "https://cdn1.epicgames.com/offer/4311a0ee99724086b1a4f261b827d038/EGS_HomeworldRemasteredCollection_GearboxSoftware_S2_1200x1600-1cae8117d05be2d91d09757668b957c4"
+      }
+    ],
+    "upcominggames": [
+      {
+        "title": "Loop Hero",
+        "id": "db122f42b41f4dec927e0f280cf653bd",
+        "description": "The Lich has thrown the world into a timeless loop and plunged its inhabitants into never-ending chaos. Wield an expanding deck of mystical cards to place enemies, buildings, and terrain along each unique expedition loop for the brave hero.",
+        "url": "https://cdn1.epicgames.com/ff50f85ed609454e80ac46d9496da34d/offer/EGS_TheLichhasthrowntheworldintoatimelessloop_FourQuarters_S1-2560x1440-dd971b1a2d79b2984c22a3b7c66c60da.jpg"
+      },
+      {
+        "title": "Europa Universalis IV",
+        "id": "45b82cb4454b40439b61ba126adfabec",
+        "description": "Lead any nation from Renaissance to Revolution in a complex simulation of the early modern world. Master the art of war, diplomacy and trade to shape and change your nation’s history!",
+        "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_EuropaUniversalisIV_ParadoxDevelopmentStudioParadoxTinto_S4_1200x1600-381fe4bad2c0951566b465ab1a46726d"
+      },
+      {
+        "title": "Bloons TD 6",
+        "id": "b27e3b556f1048b9824c7196f32afceb",
+        "description": "The Bloons are back and better than ever! Get ready for a massive 3D tower defense game designed to give you hours and hours of the best strategy gaming available.",
+        "url": "https://cdn1.epicgames.com/spt-assets/764b2d57552c436590f50318bd7587f9/bloons-td-6-offer-1jl6n.jpg"
+      }
+    ]
+  }
+  

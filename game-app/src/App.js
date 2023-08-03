@@ -1,13 +1,11 @@
-import React from 'react';
-import GamesList from './GamesList';
+import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { fetchGames } from "./api";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>My Games</h1>
-      <GamesList />
-    </div>
-  );
+const App = () => {
+  const [games, setGames] = useState({ currentGames: [], upcomingGames: [] });
+
+  useEffect(() => {
+    fetchGames().then((data) => setGames(data));
+  }, []);
 }
-
-export default App;
