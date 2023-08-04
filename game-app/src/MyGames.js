@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css'; // Import the App.css to apply the styles
+import './App.css'; 
 
 const MyGames = ({ currentGames, upcomingGames, myGames }) => {
   const getGameById = (id) => {
