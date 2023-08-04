@@ -1,39 +1,30 @@
-import React, { useState } from "react";
-import GameList from "./GameList";
+import React from 'react';
+import './App.css'; // Import the App.css to apply the styles
 
-const MyGames = ({ currentGames, upcomingGames }) => {
-  const [myGames, setMyGames] = useState([]);
-
-  const handleAddGame = (game) => {
-    setMyGames([...myGames, game]);
-  };
-
-  const handleRemoveGame = (gameId) => {
-    setMyGames(myGames.filter((game) => game.id !== gameId));
+const MyGames = ({ currentGames, upcomingGames, myGames }) => {
+  const getGameById = (id) => {
+    const allGames = [...currentGames, ...upcomingGames];
+    return allGames.find((game) => game.id === id);
   };
 
   return (
-    <div>
-      <h2>My Games</h2>
-      <GameList games={myGames} />
-
-      <h3>Current Games</h3>
-      <GameList games={currentGames} />
-
-      <h3>Upcoming Games</h3>
-      <GameList games={upcomingGames} />
-
-      <button onClick={() => handleAddGame(currentGames[0])}>
-        Add Current Game
-      </button>
-      <button onClick={() => handleAddGame(upcomingGames[0])}>
-        Add Upcoming Game
-      </button>
-      {myGames.length > 0 && (
-        <button onClick={() => handleRemoveGame(myGames[0].id)}>
-          Remove First Game
-        </button>
-      )}
+    <div className="my-games-container">
+      <h2 className="my-games-title">My Games</h2>
+      <ul className="my-games-list"> {/* Update class name here */}
+        {myGames.map((gameId) => {
+          const game = getGameById(gameId);
+          return (
+            <li key={gameId}>
+              <h3>{game.title}</h3>
+              <p>{game.description}</p>
+              <img
+                src={game.url}
+                alt={game.title}
+              />
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };

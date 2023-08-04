@@ -4,7 +4,8 @@ import CurrentGames from "./CurrentGames";
 import UpcomingGames from "./UpcomingGames";
 import MyGames from "./MyGames";
 import SearchBar from "./SearchBar";
-import "./App.css";
+import Home from "./Home";
+import './App.css';
 
 const App = () => {
   const [currentGames, setCurrentGames] = useState([]);
@@ -12,13 +13,14 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredCurrentGames, setFilteredCurrentGames] = useState([]);
   const [filteredUpcomingGames, setFilteredUpcomingGames] = useState([]);
+  const [myGames, setMyGames] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/currentgames")
       .then((resp) => resp.json())
       .then((data) => {
         setCurrentGames(data);
-        setFilteredCurrentGames(data); // Initialize filteredCurrentGames with currentGames
+        setFilteredCurrentGames(data);
       });
   }, []);
 
@@ -27,7 +29,7 @@ const App = () => {
       .then((resp) => resp.json())
       .then((data) => {
         setUpcomingGames(data);
-        setFilteredUpcomingGames(data); // Initialize filteredUpcomingGames with upcomingGames
+        setFilteredUpcomingGames(data);
       });
   }, []);
 
@@ -44,13 +46,23 @@ const App = () => {
     setFilteredUpcomingGames(filteredUpcoming);
   };
 
+  const handleAddGame = (game) => {
+    setMyGames([...myGames, game.id]);
+  };
+
   return (
     <Router>
       <div>
+        <header>
+          <h1>Gaming App</h1>
+        </header>
         <nav>
           <ul>
             <li>
-              <Link to="/">Current Games</Link>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/current">Current Games</Link>
             </li>
             <li>
               <Link to="/upcoming">Upcoming Games</Link>
@@ -65,21 +77,17 @@ const App = () => {
             onSearchButtonClick={handleSearchButtonClick}
           />
         </nav>
-        <hr />
-        <Routes>
-          <Route path="/" element={<CurrentGames currentGames={filteredCurrentGames} />} />
-          <Route path="/upcoming" element={<UpcomingGames upcomingGames={filteredUpcomingGames} />} />
-          <Route
-            path="/my-games"
-            element={
-              <MyGames
-                currentGames={currentGames}
-                upcomingGames={upcomingGames}
-                searchTerm={searchTerm}
-              />
-            }
-          />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/current" element={<CurrentGames currentGames={filteredCurrentGames} onAddGame={handleAddGame} />} />
+            <Route path="/upcoming" element={<UpcomingGames upcomingGames={filteredUpcomingGames} onAddGame={handleAddGame} />} />
+            <Route
+              path="/my-games"
+              element={<MyGames currentGames={currentGames} upcomingGames={upcomingGames} myGames={myGames} />}
+            />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

@@ -1,11 +1,11 @@
-import React from "react";
-import GameList from "./GameList";
+import React from 'react';
+import GameList from './GameList';
 
-const UpcomingGames = ({ upcomingGames }) => {
+const UpcomingGames = ({ upcomingGames, onAddGame }) => {
   return (
     <div>
       <h2>Upcoming Games</h2>
-      <GameList games={upcomingGames} />
+      <GameList games={upcomingGames} onAddGame={onAddGame} />
     </div>
   );
 };
