@@ -54,7 +54,7 @@ const App = () => {
     <Router>
       <div>
         <header>
-          <h1>Gaming App</h1>
+          <h1>Gaming selection</h1>
         </header>
         <nav>
           <ul>
